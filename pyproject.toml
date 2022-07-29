@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "pytest-dhos"
+version = "1.0.3"
+description = "Common fixtures for pytest in DHOS services and libraries"
+authors = ["Duncan Booth <duncan.booth@sensynehealth.com>"]
+keywords = ["Pytest", "Fixtures"]
+repository = "https://github.com/draysontechnologies/pytest-dhos"
+
+[tool.poetry.plugins.pytest11]
+pytest_dhos = "pytest_dhos"
+
+[[tool.poetry.source]]
+name = "sensynehealth"
+url = "https://pypi.fury.io/sensynehealth/"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask_batteries_included = {version = "*", optional = true}
+neomodel = {version = "*", optional = true}
+
+[tool.poetry.dev-dependencies]
+bandit = "*"
+black = "*"
+coverage = "*"
+isort = "*"
+mock = "*"
+mypy = "*"
+pytest = "*"
+safety = "*"
+tox = "*"
+tox-docker = "*"
+
+[tool.poetry.extras]
+fbi = ["flask_batteries_included"]
+neo = ["neomodel"]
+
+[tool.mypy]
+namespace_packages=true
+ignore_missing_imports=false
+disallow_untyped_defs=false
+
+[[tool.mypy.overrides]]
+module = [
+    "neomodel.*",
+    "flask_batteries_included.*",
+    "jinja",
+    "flask"
+]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
+known_third_party = ["pytest", "toml"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]

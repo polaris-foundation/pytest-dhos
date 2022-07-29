@@ -1,0 +1,13 @@
+[paths]
+source =
+    pytest_dhos/*
+
+[report]
+omit =
+    pytest_dhos/version.py
+    pytest_dhos/jwt_permissions.py
+
+fail_under = 70
+
+show_missing = true
+skip_covered = true
