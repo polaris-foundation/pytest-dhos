@@ -1,3 +1,7 @@
+1.0.5
+=====
+- Changed to support python >3.8
+
 1.0.4
 =====
 - Moved hosting to public pypi

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytest-dhos"
-version = "1.0.3"
+version = "1.0.5"
 description = "Common fixtures for pytest in DHOS services and libraries"
 authors = ["Duncan Booth <duncan.booth@sensynehealth.com>"]
 keywords = ["Pytest", "Fixtures"]
@@ -10,7 +10,7 @@ repository = "https://github.com/polaris-foundation/pytest-dhos"
 pytest_dhos = "pytest_dhos"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 flask_batteries_included = {version = "*", optional = true}
 neomodel = {version = "*", optional = true}
 
