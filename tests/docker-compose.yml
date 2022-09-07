@@ -15,5 +15,4 @@ services:
       context: ../
       dockerfile: Dockerfile.tox
       args:
-        GEMFURY_DOWNLOAD_KEY: $GEMFURY_DOWNLOAD_KEY
         CIRCLECI: ${CIRCLECI:-}

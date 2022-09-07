@@ -4,14 +4,10 @@ version = "1.0.3"
 description = "Common fixtures for pytest in DHOS services and libraries"
 authors = ["Duncan Booth <duncan.booth@sensynehealth.com>"]
 keywords = ["Pytest", "Fixtures"]
-repository = "https://github.com/draysontechnologies/pytest-dhos"
+repository = "https://github.com/polaris-foundation/pytest-dhos"
 
 [tool.poetry.plugins.pytest11]
 pytest_dhos = "pytest_dhos"
-
-[[tool.poetry.source]]
-name = "sensynehealth"
-url = "https://pypi.fury.io/sensynehealth/"
 
 [tool.poetry.dependencies]
 python = "^3.9"

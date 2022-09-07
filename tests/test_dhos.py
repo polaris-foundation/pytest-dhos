@@ -19,8 +19,6 @@ TEST_TOXINI = """
 [testenv]
 envdir = {toxworkdir}/py37
 
-passenv = PIP_EXTRA_INDEX_URL
-
 setenv = ENVIRONMENT = DEVELOPMENT
          AUTH0_AUDIENCE = https://dhos-dev.draysonhealth.com/
          IGNORE_JWT_VALIDATION = True
